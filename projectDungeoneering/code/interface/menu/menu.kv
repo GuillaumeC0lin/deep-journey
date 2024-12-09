@@ -1,0 +1,202 @@
+#:kivy 1.10.1
+
+#:import NoTransition kivy.uix.screenmanager.NoTransition
+#:import SlideTransition kivy.uix.screenmanager.SlideTransition
+
+
+FullApp:
+    transition: NoTransition()
+    Menu:
+    Game:
+    Options:
+    Credits:
+    Record:
+    Changelog:
+    Lang:
+
+<Menu>:
+    name:"Menu"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '../../assets/ui/menu_background.jpg'
+
+    FloatLayout:
+        Button:
+            text: root.lang ## top-left
+            size_hint: 0.2,0.05
+            pos_hint:{"x" : 0,"y" : 0.9}
+
+            on_release:app.root.current = "Lang"
+
+            #background_normal: '../../assets/ui/button_background.png'
+            #color:0,0,0
+        Button:
+            text: root.chg ## top-right
+            size_hint: 0.2,0.05
+            pos_hint:{"x" : 0.8,"y" : 0.9}
+
+        Button:
+            text: root.play ## mid pannel top left
+            size_hint: 0.3,0.05
+            pos_hint:{"x" : 0.18,"y" : 0.52}
+            on_release:app.root.current = "GameWindow"
+
+
+        Button:
+            text: root.set ##  mid pannel top right
+            size_hint: 0.3,0.05
+            on_release:app.root.current = "Settings"
+
+            pos_hint:{"x" : 0.52,"y" : 0.52}
+
+        Button:
+            text: root.badge ##  mid pannel mid left
+            size_hint: 0.3,0.05
+            pos_hint:{"x" : 0.18,"y" : 0.44}
+
+        Button:
+            text: root.cred ##  mid pannel mid right
+            size_hint: 0.3,0.05
+            pos_hint:{"x" : 0.52,"y" : 0.44}
+        
+        Button:
+            text: root.quit ##  mid pannel bottom middle
+            size_hint: 0.64,0.05
+            pos_hint:{"x" : 0.18,"y" : 0.35}
+            on_press: app.stop() 
+
+<Game>:
+    name:"GameWindow"
+
+
+            
+
+<Options>:
+    name:"Settings"
+    id: Settings
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '../../assets/ui/menu_background.jpg'
+    FloatLayout:
+        Button:
+            text: root.menu ## top
+            size_hint: 0.64,0.05
+            pos_hint:{"x" : 0.18,"y" : 0.9}
+            on_release:app.root.current = "Menu"
+
+        GridLayout:
+            pos_hint:{"x":0.25,"y":0.25}
+            size_hint:(0.5,0.5)
+            id:settings_box
+            cols:1
+            BoxLayout:
+                id:gamma_set
+                Label:
+                    id: gamma_lab
+                    text: root.gamma
+                Slider:
+                    id: slider_gamma
+                    min: 0
+                    max: 100
+                    step: 1
+                    value: 0
+
+                Label:
+                    text: str(int(slider_gamma.value))
+
+            BoxLayout:
+                id:size_set
+                Label:
+                    id: size_lab
+                    text: root.icon
+                Slider:
+                    id: slider_size
+                    min: 1
+                    max: 4
+                    step: 1
+                    value: 1
+                Label:
+                    text: str(int(slider_size.value))
+
+            BoxLayout:
+                id:vol_set
+                Label:
+                    id: vol_lab
+                    text: root.volume
+                Slider:
+                    id: slider_vol
+                    min: 0
+                    max: 100
+                    step: 1
+                    value: 0
+                Label:
+                    text: str(int(slider_vol.value))
+
+            BoxLayout:
+                id:mus_set
+                Label:
+                    id: mus_lab
+                    text: root.music
+                Slider:
+                    id: slider_mus
+                    min: 0
+                    max: 100
+                    step: 1
+                    value: 0
+                Label:
+                    text: str(int(slider_mus.value))
+
+            BoxLayout:
+                id:DSH_set
+                Button:
+                    id: DSH_but
+                    text: root.DSH_
+            BoxLayout:
+                id:DIH_set
+                Button:
+                    id: DIH_but
+                    text: root.DIH_
+
+        
+
+    
+
+<Credits>:
+    name:"Credits"
+
+<Record>:
+    name:"Record"
+
+<Changelog>:
+    name:"Change"
+
+<Lang>:
+    name:"Lang"
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: '../../assets/ui/menu_background.jpg'
+
+    FloatLayout:
+        Button:
+            text: root.mainmenu ## top
+            size_hint: 0.64,0.05
+            pos_hint:{"x" : 0.18,"y" : 0.9}
+            on_release:app.root.current = "Menu"
+
+            #background_normal: '../../assets/ui/button_background.png'
+            #color:0,0,0
+        ScrollView:
+            do_scroll_x:False
+            do_scroll_y:True
+            size_hint:{0.5,0.6}
+            pos_hint:{"x":0.25,"y":0.2}
+            GridLayout:
+                id: scroll_lang
+                cols:1
+

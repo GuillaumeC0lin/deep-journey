@@ -1,0 +1,14 @@
+options:
+	gamma correction
+	icon sizes
+	sound levels
+	dual spell hotbar
+
+badges:
+	death:
+		-poison
+		-fire
+		-starvation
+		-squashed to death
+		-cut in half
+		-

@@ -1,0 +1,10 @@
+{
+    "settings":
+    {
+        "gamma":10,
+        "icon size":10,
+        "volume":10,
+        "DSH":false,
+        "DIH":false
+    }
+}

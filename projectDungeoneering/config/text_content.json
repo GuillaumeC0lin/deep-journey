@@ -1,0 +1,46 @@
+{
+    "en":
+    {
+        "mainmenu":"Main Menu",
+        "Menu_Content":{
+            "lang":"Languages",
+            "chg":"Changelog",
+            "pl":"Play",
+            "credit":"Credit",
+            "set":"Settings",
+            "badges":"Badges",
+            "quit":"Quit"
+
+        },
+        "Options_content":{
+            "gamma":"Gamma",
+            "icon":"Icon Size",
+            "volume":"Main Volume",
+            "music":"Music Volume",
+            "DIH":"Dual Item Slot",
+            "DSH":"Dual Spell Slot"
+        }
+    },
+    "fr":
+    {
+        "mainmenu":"Menu Principal",
+        "Menu_Content":{
+            "lang":"Langues",
+            "chg":"Nouveautés",
+            "pl":"Jouer",
+            "credit":"Crédits",
+            "set":"Options",
+            "badges":"Médailles",
+            "quit":"Quitter"
+
+        },
+        "Options_content":{
+            "gamma":"Luminosité",
+            "icon":"taille des boutons",
+            "volume":"Volume principal",
+            "music":"Volume de musique",
+            "DIH":"Double raccourci d'objet",
+            "DSH":"Double raccourci de sort"
+        }
+    }
+}

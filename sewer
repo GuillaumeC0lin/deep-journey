@@ -1,0 +1,22 @@
+sewer
+100*100 1*1 on exterior
+
+rooms 15-20 rooms
+	  5 - 9 long
+	  5 - 9  width
+	  1 +-central with 100 tiles length by 5
+	  pos_centrale -> 40 < pos < 60
+	  pos vert 1 from borders
+	  2*1 branch  "#W.#"
+	  1*1 small corridor "."
+	  1*1 doghole sized corridor "*"
+	  0-3 secret rooms
+
+
+	  1) generer le central
+	  2) determiner les points d'attache
+	  3) determiner la longueur de chaque branche
+	  4) place 10-15 pre generated rooms upon it
+	  5) add rooms randomly
+	  6) randomly set secret doors
+
